@@ -1,0 +1,170 @@
+## Java Program to Check Whether a Number is Even or Odd
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Please enter the Integer numebr:");
+        int number=sc.nextInt();
+        if(number % 2==0){
+            System.out.println("The Integer Number "+number+" is an Even Number.");
+        }
+        else{
+            System.out.println("The Integer Number "+number+" is an Odd Number.");
+        }
+    }
+}
+
+## Find if a character is a Vowel or Consonant in Java
+
+package com.javacodepoint.basics;
+ 
+import java.util.Scanner;
+ 
+public class CheckVowelConsonant {
+ 
+    public static void main(String[] args) {
+        // Create scanner object to read user input
+        Scanner sc = new Scanner(System.in);
+ 
+        System.out.println("Enter an alphabet character: ");
+        char ch = sc.next().charAt(0);
+ 
+        // Check Vowel or Consonant
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            System.out.println("The given character is a Vowel.");
+        } else {
+            System.out.println("The given character is a Consonant.");
+        }
+ 
+    }
+ 
+}
+
+## How to print a Fibonacci series up to a given number in Java?
+
+package com.javacodepoint.programs;
+ 
+import java.util.Scanner;
+ 
+public class FibonacciSeries {
+ 
+    public static void main(String[] args) {
+ 
+        // Taking input from the user to print Fibonacci series up to how many numbers
+ 
+        System.out.println("Enter number up to which Fibonacci series to print:");
+ 
+        // Reading user input using Scanner object
+        int upto = new Scanner(System.in).nextInt();
+ 
+        // Initiating first two numbers of the Fibonacci series
+        int number1 = 0;
+        int number2 = 1;
+ 
+        // Printing first two numbers
+        System.out.print(number1 + " " + number2);
+ 
+        // Start the loop from 3 because first two numbers are already printed
+        for (int i = 3; i <= upto; i++) {
+            int nextNumber = number1 + number2;
+            System.out.print(" " + nextNumber);
+            number1 = number2;
+            number2 = nextNumber;
+        }
+    }
+
+## How to reverse a string without using the reverse() method in java?
+
+package com.javacodepoint.programs;
+ 
+import java.util.Scanner;
+ 
+public class ReverseString {
+ 
+    //Main method
+    public static void main(String[] args) {
+         
+        //String variable to take a string input from the user
+        String str=null;
+         
+        //Initializing string variable to hold the reverse of the string
+        String reverse="";
+         
+        //Creating scanner class object for reading user input      
+        Scanner sc = new Scanner(System.in);
+         
+        System.out.println("Please enter a string to reverse: ");
+         
+        //reading the string input
+        str=sc.next();
+         
+        //iterating the string from the last to beginning
+        for(int i=str.length()-1; i>=0; i--) {
+             
+            //picking one by one character and concatenating it with reverse
+            reverse =  reverse + str.charAt(i);
+        }
+         
+        //Final output
+        System.out.println("The reverse of "+str+" is "+reverse);
+ 
+    }
+ 
+}
+
+## How to check whether a String is a Palindrome or not in java?
+
+class Main {
+    public static void main(String[] args) {
+        String str="madam";
+        String reverse="";
+        int ln=str.length();
+        for(int i=ln-1;i >=0;i--){
+            reverse=reverse+str.charAt(i);
+        }
+        System.out.println("The reverse of "+str+" is "+reverse);
+        if(reverse.equals(str)){
+            System.out.print(str+" String is Palindrom");
+        }
+        else{
+            System.out.print(str+" String is not a Palindrom");
+        }
+        
+    }
+}
+
+# Remove Duplicate Character from the String
+
+public class Main {
+    public static void main(String[] args) {
+   
+  String str ="Java API Java";
+ StringBuilder result=new StringBuilder();
+ boolean[] seen=new boolean[256];
+for(char ch: str.toCharArray()){
+  if(!seen[ch]){
+   seen[ch]=true;
+   result.append(ch);
+        }
+
+    }
+    System.out.println(result.toString());
+}
+}
+
+## Remove Duplicate word from the String
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        String str="Java API Java";
+        String[] str1=str.split(" ");
+        Set <String> set = new LinkedHashSet<>(Arrays.asList(str1));
+        String output=String.join(" ",set);
+        System.out.println(output);
+        
+    }
+}
+
+
